@@ -16,7 +16,9 @@
   "author": "Per Jansson",
   "license": "MIT",
   "dependencies": {
-    "express": "~4.9.7"
+    "express": "~4.9.7",
+    "react": "~0.11.2",
+    "node-jsx": "~0.11.0"
   },
   "devDependencies": {
     "browserify": "~6.0.3",
@@ -24,5 +26,10 @@
     "reactify": "~0.14.0",
     "uglify-js": "~2.4.15",
     "watchify": "~2.0.0"
+  },
+  "browserify" : {
+    "transform" : [
+      "reactify"
+    ]
   }
 }
