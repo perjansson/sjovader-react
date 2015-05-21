@@ -1,0 +1,28 @@
+{
+  "name": "sjovader-react",
+  "version": "0.0.1",
+  "description": "React app loading sjövederprognosen från SMHI",
+  "main": "app.js",
+  "scripts": {
+    "watch": "watchify app.js -o public/js/bundle.js -v",
+    "browserify": "browserify app.js | uglifyjs > public/js/bundle.js",
+    "build": "npm run browserify ",
+    "start": "npm run watch & nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/perjansson/sjovader-react.git"
+  },
+  "author": "Per Jansson",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.9.7"
+  },
+  "devDependencies": {
+    "browserify": "~6.0.3",
+    "nodemon": "^1.2.1",
+    "reactify": "~0.14.0",
+    "uglify-js": "~2.4.15",
+    "watchify": "~2.0.0"
+  }
+}
