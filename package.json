@@ -2,10 +2,10 @@
   "name": "sjovader-react",
   "version": "0.0.1",
   "description": "React app loading sjövederprognosen från SMHI",
-  "main": "app.js",
+  "main": "app/app.js",
   "scripts": {
-    "watch": "watchify app.js -o public/js/bundle.js -v",
-    "browserify": "browserify app.js | uglifyjs > public/js/bundle.js",
+    "watch": "watchify app/app.js -o public/js/bundle.js -v",
+    "browserify": "browserify app/app.js | uglifyjs > public/js/bundle.js",
     "build": "npm run browserify ",
     "start": "npm run watch & nodemon server.js"
   },
