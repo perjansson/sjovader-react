@@ -9,8 +9,16 @@ React.renderComponent(
 /** @jsx React.DOM */
 
 var React = require('react'),
-	Forecast = require('./component/forecast')
+	Forecasts = require('./component/forecasts')
 
 $(function () {
-    React.renderComponent(<Forecast/>, $("#app")[0]);
+    React.renderComponent(
+    	<div>
+	    	<div className="jumbotron">
+			  <h1>Sjöväderprognosen</h1>
+			  <p>Från <a href="http://www.smhi.se/vadret/hav-och-kust/sjovader" target="_blank">SMHI</a></p>
+			</div>
+	    	<Forecasts/>
+    	</div>, 
+    	$("#app")[0]);
 });
